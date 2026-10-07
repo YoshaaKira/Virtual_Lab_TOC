@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Virtual Laboratory for Theory of Computation (TOC Virtual Lab)
 
 An interactive, web-based learning and experimentation platform designed to help students master core Theory of Computation concepts through dynamic visualization, hands-on simulation, step-by-step tracing, and conceptual self-assessment.
@@ -105,3 +106,6 @@ Creates an optimized static bundle in the `dist/` directory.
 | `POST` | `/api/tm/simulate` | Simulates Turing Machine tape execution |
 | `POST` | `/api/regex/match` | Matches regex patterns with highlighted spans |
 | `POST` | `/api/cfg/parse` | Derives strings using CFG leftmost derivation |
+=======
+# Virtual_Lab_TOC
+>>>>>>> 30eb7b7b81f1b3e5186e2454e93bae51a821eef0
