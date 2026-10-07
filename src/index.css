@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+  .panel {
+    @apply bg-gray-900 border border-gray-800 rounded-xl;
+  }
+  .input {
+    @apply bg-gray-800 border border-gray-700 text-gray-100 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500;
+  }
+  .label {
+    @apply text-sm font-medium text-gray-400 mb-1 block;
+  }
+  .badge {
+    @apply text-xs px-2 py-1 rounded-full font-medium;
+  }
+  .badge-blue {
+    @apply badge bg-blue-900 text-blue-300;
+  }
+  .badge-green {
+    @apply badge bg-green-900 text-green-300;
+  }
+  .badge-red {
+    @apply badge bg-red-900 text-red-300;
+  }
+  .badge-yellow {
+    @apply badge bg-yellow-900 text-yellow-300;
+  }
+  .badge-purple {
+    @apply badge bg-purple-900 text-purple-300;
+  }
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  font-family: 'Inter', sans-serif;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  @apply bg-gray-800 border border-gray-700 rounded-lg;
+}
+
+.react-flow__controls-button {
+  @apply bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700;
+}
+
+.react-flow__minimap {
+  @apply bg-gray-900 border border-gray-700 rounded-lg;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Tape cells for Turing Machine */
+.tape-cell {
+  @apply w-12 h-12 border border-gray-600 flex items-center justify-center font-mono text-lg font-medium transition-all duration-300;
+}
+.tape-cell.active {
+  @apply border-blue-400 bg-blue-900/50 text-blue-300 scale-110;
+}
+
+/* State node highlight animations */
+@keyframes stateActive {
+  0%, 100% { box-shadow: 0 0 0 2px #3b82f6; }
+  50% { box-shadow: 0 0 0 6px rgba(59,130,246,0.3); }
+}
+.state-active {
+  animation: stateActive 1s ease-in-out infinite;
+}
+
+/* Stack visualization */
+.stack-cell {
+  @apply bg-gray-800 border border-gray-600 px-3 py-2 text-center font-mono text-sm transition-all duration-200;
+}
+.stack-cell:first-child {
+  @apply border-t-2 border-t-blue-500;
+}
